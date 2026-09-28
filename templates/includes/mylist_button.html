@@ -1,0 +1,6 @@
+{# "+ Danh sách" toggle. Needs movie and in_list. #}
+<button type="button" data-mylist="{% url 'catalog:my_list_toggle' movie.slug %}" data-movie="{{ movie.slug }}" aria-pressed="{% if in_list %}true{% else %}false{% endif %}" aria-label="Thêm {{ movie.title }} vào Danh sách của tôi" class="group btn btn-outline bg-bg/40 backdrop-blur">
+  <svg class="size-5 group-aria-pressed:hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+  <svg class="hidden size-5 group-aria-pressed:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+  <span data-mylist-label>{% if in_list %}Đã thêm{% else %}Danh sách{% endif %}</span>
+</button>

@@ -1,0 +1,12 @@
+<li class="w-32 md:w-40 lg:w-44">
+  <a href="{{ movie.get_absolute_url }}" class="group block rounded-card focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand">
+    <div class="skeleton relative aspect-[2/3] overflow-hidden rounded-card">
+      {% include "includes/card_poster.html" with movie=movie only %}
+      <div aria-hidden="true" class="pointer-events-none absolute inset-0 hidden flex-col justify-end bg-bg/85 p-3 opacity-0 transition-opacity duration-200 pointer-fine:flex pointer-fine:group-hover:opacity-100 pointer-fine:group-focus-visible:opacity-100">
+        <p class="text-xs leading-snug text-muted">{{ movie.year }} · {{ movie.country.name }} · {{ movie.genres.all|join:", " }}</p>
+        <p class="mt-1 line-clamp-4 text-xs leading-snug">{{ movie.synopsis }}</p>
+      </div>
+    </div>
+    <h3 class="mt-2 line-clamp-2 min-h-[2lh] text-sm font-medium leading-snug">{{ movie.title }}</h3>
+  </a>
+</li>

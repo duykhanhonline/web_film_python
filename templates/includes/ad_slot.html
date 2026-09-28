@@ -1,0 +1,18 @@
+{% if show %}
+<aside class="ad-slot" data-slot="{{ code }}" aria-label="Quảng cáo">
+  {% if creative %}
+  <a href="{{ creative.link }}" target="_blank" rel="sponsored noopener" data-ad-creative class="block size-full">
+    <picture>
+      <source media="(min-width: 768px)" srcset="{{ creative.image_desktop.url }}" width="{{ size.desktop.0 }}" height="{{ size.desktop.1 }}">
+      <img src="{{ creative.image_mobile.url }}" alt="{{ creative.alt_text }}" width="{{ size.mobile.0 }}" height="{{ size.mobile.1 }}" loading="lazy" decoding="async" class="size-full object-contain">
+    </picture>
+  </a>
+  {# Swapped in by ads.js if the creative image fails to load #}
+  <template data-house-ad>{% include "includes/house_ad.html" %}</template>
+  {% else %}
+  {% include "includes/house_ad.html" %}
+  {% endif %}
+  <span class="pointer-events-none absolute left-2 top-1 text-[10px] leading-snug text-muted">Quảng cáo</span>
+  <a href="{% url 'billing:plans' %}" class="absolute right-0 top-0 flex min-h-11 items-start px-2 pt-1 text-[10px] leading-snug text-muted underline hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand">Ẩn quảng cáo</a>
+</aside>
+{% endif %}

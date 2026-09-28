@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load billing_tags %}
+{# Basic version. Payment method picker (MoMo, ZaloPay, VNPay, QR, thẻ) comes next. #}
+
+{% block title %}Gói VIP - {{ brand_name }}{% endblock %}
+
+{% block content %}
+<div class="px-4 pt-6 md:px-8 lg:px-12">
+  <h1 class="text-2xl font-bold leading-snug md:text-3xl">Nâng cấp VIP</h1>
+  <p class="mt-2 text-muted">Xem phim không quảng cáo, mở khóa toàn bộ phim VIP.</p>
+  <ul class="mt-6 grid gap-4 md:grid-cols-3">
+    {% for plan in plans %}
+    <li class="relative flex flex-col rounded-card border bg-surface p-5 {% if plan.is_best_value %}border-vip{% else %}border-line{% endif %}">
+      {% if plan.is_best_value %}<span class="badge badge-vip absolute -top-3 left-5">Tiết kiệm nhất</span>{% endif %}
+      <h2 class="text-lg font-bold leading-snug">{{ plan.name }}</h2>
+      <p class="mt-2 text-3xl font-bold leading-snug">{{ plan.price_vnd|vnd }}</p>
+      <p class="text-sm text-muted">{{ plan.price_per_month|vnd }} / tháng</p>
+      <button type="button" class="btn btn-primary mt-5">Đăng ký</button>
+    </li>
+    {% empty %}
+    <li class="text-muted">Chưa có gói nào.</li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}

@@ -1,0 +1,9 @@
+node_modules/
+.venv/
+__pycache__/
+*.pyc
+.env
+media/
+staticfiles/
+static/css/output.css
+.ruff_cache/

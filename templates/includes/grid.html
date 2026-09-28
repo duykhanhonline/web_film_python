@@ -1,0 +1,15 @@
+{# Poster grid for listings and search. Needs movies, page_obj, querystring (optional). #}
+<ul class="mt-6 grid grid-cols-3 gap-x-3 gap-y-5 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 [&>li]:w-auto">
+  {% for m in movies %}{% include "includes/card.html" with movie=m only %}{% endfor %}
+</ul>
+{% if page_obj.has_other_pages %}
+<nav aria-label="Phân trang" class="mt-8 flex items-center justify-center gap-2 text-sm">
+  {% if page_obj.has_previous %}
+  <a href="?{% if querystring %}{{ querystring }}&amp;{% endif %}page={{ page_obj.previous_page_number }}" class="btn btn-outline">Trang trước</a>
+  {% endif %}
+  <span class="px-3 text-muted">Trang {{ page_obj.number }}/{{ page_obj.paginator.num_pages }}</span>
+  {% if page_obj.has_next %}
+  <a href="?{% if querystring %}{{ querystring }}&amp;{% endif %}page={{ page_obj.next_page_number }}" class="btn btn-outline">Trang sau</a>
+  {% endif %}
+</nav>
+{% endif %}

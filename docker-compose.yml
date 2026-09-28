@@ -1,0 +1,33 @@
+# Local MySQL for development: docker compose up -d
+# Redis is optional (off in dev): docker compose --profile redis up -d
+services:
+  db:
+    image: mysql:8
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: phimhay
+      MYSQL_USER: phimhay
+      MYSQL_PASSWORD: phimhay
+      MYSQL_ROOT_PASSWORD: root
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_0900_ai_ci
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+      - ./docker/mysql/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+
+  redis:
+    image: redis:7-alpine
+    profiles: ["redis"]
+    restart: unless-stopped
+    command: ["redis-server", "--save", "", "--appendonly", "no"]
+    ports:
+      - "6380:6379"
+
+volumes:
+  mysql-data:
+networks:
+  db-network:
+    external: true

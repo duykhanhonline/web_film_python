@@ -1,0 +1,35 @@
+{% load static %}<footer class="mt-16 border-t border-line px-4 py-10 text-sm text-muted md:px-8 lg:px-12">
+  <div class="grid gap-8 md:grid-cols-4">
+    <div>
+      <a href="{% url 'catalog:home' %}" class="inline-flex items-center gap-2 rounded-card focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand">
+        <img src="{% static 'img/logo.svg' %}" alt="" width="28" height="28" class="size-7" loading="lazy">
+        <span class="text-lg font-bold leading-snug text-text">{{ brand_name }}</span>
+      </a>
+      <p class="mt-3 leading-relaxed">Xem phim bộ, phim lẻ Hàn Quốc, Trung Quốc, Việt Nam với Vietsub và Thuyết minh chất lượng cao.</p>
+    </div>
+    <nav aria-label="Khám phá">
+      <h2 class="font-medium leading-snug text-text">Khám phá</h2>
+      <ul class="mt-2">
+        <li><a href="{% url 'catalog:series' %}" class="flex min-h-11 items-center hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand">Phim bộ</a></li>
+        <li><a href="{% url 'catalog:movies' %}" class="flex min-h-11 items-center hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand">Phim lẻ</a></li>
+        <li><a href="{% url 'catalog:search' %}" class="flex min-h-11 items-center hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand">Tìm kiếm</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Tài khoản">
+      <h2 class="font-medium leading-snug text-text">Tài khoản</h2>
+      <ul class="mt-2">
+        <li><a href="{% url 'billing:plans' %}" class="flex min-h-11 items-center hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand">Gói VIP</a></li>
+        <li><a href="{% url 'accounts:login' %}" class="flex min-h-11 items-center hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand">Đăng nhập</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Hỗ trợ">
+      <h2 class="font-medium leading-snug text-text">Hỗ trợ</h2>
+      <ul class="mt-2">
+        <li><a href="#" class="flex min-h-11 items-center hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand">Câu hỏi thường gặp</a></li>
+        <li><a href="#" class="flex min-h-11 items-center hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand">Điều khoản sử dụng</a></li>
+        <li><a href="#" class="flex min-h-11 items-center hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand">Chính sách bảo mật</a></li>
+      </ul>
+    </nav>
+  </div>
+  <p class="mt-8 border-t border-line pt-6 text-xs">© {% now "Y" %} {{ brand_name }}. Bảo lưu mọi quyền.</p>
+</footer>

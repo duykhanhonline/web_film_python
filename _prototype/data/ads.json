@@ -1,0 +1,20 @@
+{
+  "ad-billboard": {
+    "href": "#",
+    "alt": "Quảng cáo mẫu",
+    "desktop": "https://placehold.co/970x250/3A3322/F5F5F7/webp?text=970x250",
+    "mobile": "https://placehold.co/320x100/3A3322/F5F5F7/webp?text=320x100"
+  },
+  "ad-infeed": null,
+  "ad-sidebar": {
+    "href": "#",
+    "alt": "Quảng cáo mẫu",
+    "desktop": "https://placehold.co/300x250/3A3322/F5F5F7/webp?text=300x250",
+    "mobile": "https://placehold.co/300x250/3A3322/F5F5F7/webp?text=300x250"
+  },
+  "ad-sponsored-row": {
+    "title": "Phim hè sôi động",
+    "sponsor": "Thương hiệu tài trợ",
+    "movieIds": ["bangkok-ve-dem", "hen-em-o-da-lat", "tinh-yeu-mua-mua", "rong-thep", "thanh-pho-khong-ngu", "dau-bep-nha-ben"]
+  }
+}

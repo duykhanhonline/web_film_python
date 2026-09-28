@@ -1,0 +1,423 @@
+[
+  {
+    "id": "hau-due-mat-troi",
+    "title": "Hậu Duệ Mặt Trời",
+    "originalTitle": "Descendants of the Sun",
+    "type": "bo",
+    "country": "Hàn Quốc",
+    "genres": [
+      "Tình cảm",
+      "Hành động"
+    ],
+    "year": 2016,
+    "ageRating": "T16",
+    "audio": [
+      "Vietsub",
+      "Thuyết minh"
+    ],
+    "access": "free",
+    "isNew": false,
+    "episodes": {
+      "current": 16,
+      "total": 16
+    },
+    "schedule": null,
+    "synopsis": "Đại úy đặc nhiệm Yoo Si Jin và bác sĩ Kang Mo Yeon gặp nhau giữa vùng chiến sự, nơi tình yêu phải đối mặt với lựa chọn sinh tử.",
+    "poster": "https://placehold.co/{w}x{h}/1E2A44/F5F5F7/webp?text=PhimHay",
+    "backdrop": "https://placehold.co/{w}x{h}/1E2A44/1E2A44/webp"
+  },
+  {
+    "id": "mua-he-cuoi-cung",
+    "title": "Mùa Hè Cuối Cùng",
+    "originalTitle": "The Last Summer",
+    "type": "bo",
+    "country": "Hàn Quốc",
+    "genres": [
+      "Tình cảm",
+      "Tâm lý"
+    ],
+    "year": 2026,
+    "ageRating": "T13",
+    "audio": [
+      "Vietsub"
+    ],
+    "access": "vip",
+    "isNew": true,
+    "episodes": {
+      "current": 12,
+      "total": 16
+    },
+    "schedule": "Cập nhật thứ 3, 4 hàng tuần",
+    "synopsis": "Hai người bạn thơ ấu trở về thị trấn ven biển để bán ngôi nhà cũ và đối diện những điều chưa từng nói.",
+    "poster": "https://placehold.co/{w}x{h}/2A1E44/F5F5F7/webp?text=PhimHay",
+    "backdrop": "https://placehold.co/{w}x{h}/2A1E44/2A1E44/webp"
+  },
+  {
+    "id": "dau-bep-nha-ben",
+    "title": "Đầu Bếp Nhà Bên",
+    "originalTitle": "Chef Next Door",
+    "type": "bo",
+    "country": "Hàn Quốc",
+    "genres": [
+      "Hài hước",
+      "Tình cảm"
+    ],
+    "year": 2025,
+    "ageRating": "K",
+    "audio": [
+      "Vietsub",
+      "Thuyết minh"
+    ],
+    "access": "free",
+    "isNew": true,
+    "episodes": {
+      "current": 8,
+      "total": 12
+    },
+    "schedule": "Cập nhật thứ 3, 4 hàng tuần",
+    "synopsis": "Cô nhân viên văn phòng vụng về thuê lại căn hộ sát vách một đầu bếp khó tính.",
+    "poster": "https://placehold.co/{w}x{h}/44301E/F5F5F7/webp?text=PhimHay",
+    "backdrop": "https://placehold.co/{w}x{h}/44301E/44301E/webp"
+  },
+  {
+    "id": "luat-su-bat-dac-di",
+    "title": "Luật Sư Bất Đắc Dĩ",
+    "originalTitle": "Reluctant Counsel",
+    "type": "bo",
+    "country": "Hàn Quốc",
+    "genres": [
+      "Hình sự",
+      "Tâm lý"
+    ],
+    "year": 2024,
+    "ageRating": "T16",
+    "audio": [
+      "Thuyết minh"
+    ],
+    "access": "vip",
+    "isNew": false,
+    "episodes": {
+      "current": 20,
+      "total": 20
+    },
+    "schedule": null,
+    "synopsis": "Một cựu công tố viên bị buộc phải bào chữa cho kẻ mà anh từng đưa vào tù.",
+    "poster": "https://placehold.co/{w}x{h}/1E3A44/F5F5F7/webp?text=PhimHay",
+    "backdrop": "https://placehold.co/{w}x{h}/1E3A44/1E3A44/webp"
+  },
+  {
+    "id": "truong-ca-phuong-hoang",
+    "title": "Trường Ca Phượng Hoàng",
+    "originalTitle": "Song of the Phoenix",
+    "type": "bo",
+    "country": "Trung Quốc",
+    "genres": [
+      "Cổ trang",
+      "Tình cảm"
+    ],
+    "year": 2026,
+    "ageRating": "T13",
+    "audio": [
+      "Vietsub",
+      "Thuyết minh"
+    ],
+    "access": "vip",
+    "isNew": true,
+    "episodes": {
+      "current": 36,
+      "total": 40
+    },
+    "schedule": "Cập nhật thứ 2, 3, 4 hàng tuần",
+    "synopsis": "Công chúa lưu lạc giang hồ, mang theo bí mật có thể lật đổ cả triều đình.",
+    "poster": "https://placehold.co/{w}x{h}/44211E/F5F5F7/webp?text=PhimHay",
+    "backdrop": "https://placehold.co/{w}x{h}/44211E/44211E/webp"
+  },
+  {
+    "id": "kiem-tam-truyen-ky",
+    "title": "Kiếm Tâm Truyền Kỳ",
+    "originalTitle": "Legend of the Sword Heart",
+    "type": "bo",
+    "country": "Trung Quốc",
+    "genres": [
+      "Cổ trang",
+      "Hành động"
+    ],
+    "year": 2025,
+    "ageRating": "T16",
+    "audio": [
+      "Thuyết minh"
+    ],
+    "access": "free",
+    "isNew": false,
+    "episodes": {
+      "current": 24,
+      "total": 24
+    },
+    "schedule": null,
+    "synopsis": "Thiếu niên mồ côi tìm lại thanh kiếm thất truyền của sư phụ để báo thù cho cả môn phái.",
+    "poster": "https://placehold.co/{w}x{h}/2E441E/F5F5F7/webp?text=PhimHay",
+    "backdrop": "https://placehold.co/{w}x{h}/2E441E/2E441E/webp"
+  },
+  {
+    "id": "thuong-hai-mua-roi",
+    "title": "Thượng Hải Mưa Rơi",
+    "originalTitle": "Shanghai Rain",
+    "type": "bo",
+    "country": "Trung Quốc",
+    "genres": [
+      "Tình cảm",
+      "Tâm lý"
+    ],
+    "year": 2024,
+    "ageRating": "T13",
+    "audio": [
+      "Lồng tiếng",
+      "Vietsub"
+    ],
+    "access": "vip",
+    "isNew": false,
+    "episodes": {
+      "current": 30,
+      "total": 30
+    },
+    "schedule": null,
+    "synopsis": "Chuyện tình trắc trở của hai kiến trúc sư giữa lòng Thượng Hải hiện đại.",
+    "poster": "https://placehold.co/{w}x{h}/1E4436/F5F5F7/webp?text=PhimHay",
+    "backdrop": "https://placehold.co/{w}x{h}/1E4436/1E4436/webp"
+  },
+  {
+    "id": "nha-co-ba-chi-em",
+    "title": "Nhà Có Ba Chị Em",
+    "originalTitle": "Three Sisters",
+    "type": "bo",
+    "country": "Việt Nam",
+    "genres": [
+      "Tâm lý",
+      "Hài hước"
+    ],
+    "year": 2026,
+    "ageRating": "K",
+    "audio": [
+      "Vietsub"
+    ],
+    "access": "free",
+    "isNew": true,
+    "episodes": {
+      "current": 45,
+      "total": 60
+    },
+    "schedule": "Cập nhật thứ 2 đến thứ 5 hàng tuần",
+    "synopsis": "Ba chị em với ba tính cách trái ngược cùng giữ tiệm bánh mì gia truyền ở Sài Gòn.",
+    "poster": "https://placehold.co/{w}x{h}/44401E/F5F5F7/webp?text=PhimHay",
+    "backdrop": "https://placehold.co/{w}x{h}/44401E/44401E/webp"
+  },
+  {
+    "id": "chuyen-xe-cuoi-ngay",
+    "title": "Chuyến Xe Cuối Ngày",
+    "originalTitle": "The Last Bus",
+    "type": "le",
+    "country": "Việt Nam",
+    "genres": [
+      "Hình sự",
+      "Tâm lý"
+    ],
+    "year": 2025,
+    "ageRating": "T18",
+    "audio": [
+      "Vietsub"
+    ],
+    "access": "vip",
+    "isNew": false,
+    "duration": 112,
+    "synopsis": "Một tài xế xe buýt đêm vô tình chở theo nhân chứng duy nhất của một vụ án.",
+    "poster": "https://placehold.co/{w}x{h}/331E44/F5F5F7/webp?text=PhimHay",
+    "backdrop": "https://placehold.co/{w}x{h}/331E44/331E44/webp"
+  },
+  {
+    "id": "hen-em-o-da-lat",
+    "title": "Hẹn Em Ở Đà Lạt",
+    "originalTitle": "See You in Da Lat",
+    "type": "le",
+    "country": "Việt Nam",
+    "genres": [
+      "Tình cảm"
+    ],
+    "year": 2024,
+    "ageRating": "K",
+    "audio": [
+      "Vietsub"
+    ],
+    "access": "free",
+    "isNew": false,
+    "duration": 98,
+    "synopsis": "Mười năm sau lời hẹn năm ấy, liệu họ có còn quay về con dốc cũ?",
+    "poster": "https://placehold.co/{w}x{h}/1E3344/F5F5F7/webp?text=PhimHay",
+    "backdrop": "https://placehold.co/{w}x{h}/1E3344/1E3344/webp"
+  },
+  {
+    "id": "ma-lang",
+    "title": "Ma Làng",
+    "originalTitle": "Village Ghost",
+    "type": "le",
+    "country": "Việt Nam",
+    "genres": [
+      "Kinh dị"
+    ],
+    "year": 2026,
+    "ageRating": "T18",
+    "audio": [
+      "Vietsub"
+    ],
+    "access": "vip",
+    "isNew": true,
+    "duration": 95,
+    "synopsis": "Nhóm bạn trẻ về làng quê quay phim tài liệu và phát hiện lời nguyền trăm năm.",
+    "poster": "https://placehold.co/{w}x{h}/441E2A/F5F5F7/webp?text=PhimHay",
+    "backdrop": "https://placehold.co/{w}x{h}/441E2A/441E2A/webp"
+  },
+  {
+    "id": "bangkok-ve-dem",
+    "title": "Bangkok Về Đêm",
+    "originalTitle": "Bangkok After Dark",
+    "type": "le",
+    "country": "Thái Lan",
+    "genres": [
+      "Hành động",
+      "Hình sự"
+    ],
+    "year": 2023,
+    "ageRating": "T18",
+    "audio": [
+      "Thuyết minh",
+      "Vietsub"
+    ],
+    "access": "free",
+    "isNew": false,
+    "duration": 104,
+    "synopsis": "Cựu võ sĩ Muay Thái lao vào thế giới ngầm Bangkok để giải cứu em gái.",
+    "poster": "https://placehold.co/{w}x{h}/44361E/F5F5F7/webp?text=PhimHay",
+    "backdrop": "https://placehold.co/{w}x{h}/44361E/44361E/webp"
+  },
+  {
+    "id": "tinh-yeu-mua-mua",
+    "title": "Tình Yêu Mùa Mưa",
+    "originalTitle": "Rainy Season Love",
+    "type": "bo",
+    "country": "Thái Lan",
+    "genres": [
+      "Tình cảm",
+      "Hài hước"
+    ],
+    "year": 2025,
+    "ageRating": "T13",
+    "audio": [
+      "Vietsub"
+    ],
+    "access": "vip",
+    "isNew": false,
+    "episodes": {
+      "current": 14,
+      "total": 14
+    },
+    "schedule": null,
+    "synopsis": "Cô hướng dẫn viên du lịch và chàng nhiếp ảnh gia kẹt lại ở Chiang Mai suốt mùa mưa.",
+    "poster": "https://placehold.co/{w}x{h}/1E4428/F5F5F7/webp?text=PhimHay",
+    "backdrop": "https://placehold.co/{w}x{h}/1E4428/1E4428/webp"
+  },
+  {
+    "id": "hoc-vien-phap-su",
+    "title": "Học Viện Pháp Sư",
+    "originalTitle": "Academy of Mages",
+    "type": "bo",
+    "country": "Nhật Bản",
+    "genres": [
+      "Hoạt hình",
+      "Hành động"
+    ],
+    "year": 2026,
+    "ageRating": "T13",
+    "audio": [
+      "Vietsub",
+      "Lồng tiếng"
+    ],
+    "access": "free",
+    "isNew": true,
+    "episodes": {
+      "current": 12,
+      "total": 24
+    },
+    "schedule": "Cập nhật thứ 7 hàng tuần",
+    "synopsis": "Cậu bé không có phép thuật lọt vào học viện pháp sư danh giá nhất vương quốc.",
+    "poster": "https://placehold.co/{w}x{h}/3A1E44/F5F5F7/webp?text=PhimHay",
+    "backdrop": "https://placehold.co/{w}x{h}/3A1E44/3A1E44/webp"
+  },
+  {
+    "id": "rong-thep",
+    "title": "Rồng Thép",
+    "originalTitle": "Steel Dragon",
+    "type": "le",
+    "country": "Nhật Bản",
+    "genres": [
+      "Hoạt hình",
+      "Hành động"
+    ],
+    "year": 2024,
+    "ageRating": "P",
+    "audio": [
+      "Lồng tiếng"
+    ],
+    "access": "free",
+    "isNew": false,
+    "duration": 88,
+    "synopsis": "Một cô bé kỹ sư chế tạo chú rồng máy để cứu thành phố khỏi cơn bão lớn.",
+    "poster": "https://placehold.co/{w}x{h}/1E2444/F5F5F7/webp?text=PhimHay",
+    "backdrop": "https://placehold.co/{w}x{h}/1E2444/1E2444/webp"
+  },
+  {
+    "id": "nhiem-vu-cuoi-cung",
+    "title": "Nhiệm Vụ Cuối Cùng",
+    "originalTitle": "The Final Mission",
+    "type": "le",
+    "country": "Âu Mỹ",
+    "genres": [
+      "Hành động"
+    ],
+    "year": 2025,
+    "ageRating": "T16",
+    "audio": [
+      "Thuyết minh",
+      "Vietsub"
+    ],
+    "access": "vip",
+    "isNew": false,
+    "duration": 138,
+    "synopsis": "Đặc vụ sắp nghỉ hưu nhận nhiệm vụ cuối cùng: hộ tống nhân chứng qua ba quốc gia trong 48 giờ.",
+    "poster": "https://placehold.co/{w}x{h}/44281E/F5F5F7/webp?text=PhimHay",
+    "backdrop": "https://placehold.co/{w}x{h}/44281E/44281E/webp"
+  },
+  {
+    "id": "thanh-pho-khong-ngu",
+    "title": "Thành Phố Không Ngủ",
+    "originalTitle": "City That Never Sleeps",
+    "type": "bo",
+    "country": "Âu Mỹ",
+    "genres": [
+      "Hình sự"
+    ],
+    "year": 2024,
+    "ageRating": "T16",
+    "audio": [
+      "Vietsub"
+    ],
+    "access": "free",
+    "isNew": false,
+    "episodes": {
+      "current": 10,
+      "total": 10
+    },
+    "schedule": null,
+    "synopsis": "Nữ thám tử trẻ truy lùng kẻ giết người hàng loạt chỉ ra tay vào lúc rạng sáng.",
+    "poster": "https://placehold.co/{w}x{h}/1E4444/F5F5F7/webp?text=PhimHay",
+    "backdrop": "https://placehold.co/{w}x{h}/1E4444/1E4444/webp"
+  }
+]

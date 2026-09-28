@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{# Basic version. Custom controls, progress saving and player ad states come next. #}
+
+{% block title %}{{ movie.title }}{% if movie.is_series %} - Tập {{ episode.number }}{% endif %} - {{ brand_name }}{% endblock %}
+
+{% block content %}
+<div class="px-4 pt-4 md:px-8 lg:px-12">
+  <div data-player class="relative aspect-video w-full overflow-hidden rounded-card bg-surface">
+    {% if episode.video %}
+    <video src="{{ episode.video.url }}" controls preload="metadata" class="size-full"></video>
+    {% else %}
+    <div class="flex size-full items-center justify-center text-sm text-muted">Video mẫu chưa được tải lên.</div>
+    {% endif %}
+  </div>
+  <h1 class="mt-4 text-xl font-bold leading-snug md:text-2xl">
+    <a href="{{ movie.get_absolute_url }}" class="hover:underline">{{ movie.title }}</a>{% if movie.is_series %} · Tập {{ episode.number }}{% endif %}
+  </h1>
+  {% if episode.title %}<p class="text-sm leading-snug text-muted">{{ episode.title }}</p>{% endif %}
+</div>
+{% endblock %}

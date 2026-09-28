@@ -1,0 +1,29 @@
+{% load static %}<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{{ brand_name }} - Xem phim bộ, phim lẻ Vietsub, Thuyết minh{% endblock %}</title>
+  <meta name="description" content="{% block description %}Xem phim bộ, phim lẻ Hàn Quốc, Trung Quốc, Việt Nam với Vietsub và Thuyết minh.{% endblock %}">
+  <meta name="csrf-token" content="{{ csrf_token }}">
+  {% block meta %}{% endblock %}
+  <link rel="icon" href="{% static 'img/logo.svg' %}" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="{% static 'css/output.css' %}">
+  <script type="module" src="{% static 'js/main.js' %}"></script>
+  {% block scripts %}{% endblock %}
+</head>
+<body data-user="{{ user_tier }}" {% block body_attrs %}{% endblock %} class="bg-bg pb-[calc(3.5rem+env(safe-area-inset-bottom))] font-sans text-text antialiased md:pb-0">
+  <a href="#noi-dung" class="sr-only rounded-card bg-brand px-4 py-2 text-brand-ink focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50">Bỏ qua đến nội dung</a>
+  {% include "includes/header.html" with request=request user_tier=user_tier brand_name=brand_name nav_menus=nav_menus only %}
+
+  <main id="noi-dung" class="{% block main_class %}pt-14 md:pt-16{% endblock %}">
+    {% block content %}{% endblock %}
+  </main>
+
+  {% include "includes/footer.html" with brand_name=brand_name only %}
+  {% include "includes/bottom_nav.html" with request=request only %}
+</body>
+</html>

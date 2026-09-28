@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load catalog_tags %}
+{# Basic version. Episode grid, share buttons, sidebar ad and similar titles come next. #}
+
+{% block title %}{{ movie.title }} - {{ brand_name }}{% endblock %}
+{% block description %}{{ movie.synopsis|truncatechars:160 }}{% endblock %}
+{% block meta %}
+  <meta property="og:type" content="video.{% if movie.is_series %}tv_show{% else %}movie{% endif %}">
+  <meta property="og:title" content="{{ movie.title }}">
+  <meta property="og:description" content="{{ movie.synopsis|truncatechars:200 }}">
+  <meta property="og:image" content="{{ request.scheme }}://{{ request.get_host }}{{ movie.backdrop|rendition:1280 }}">
+  <meta property="og:url" content="{{ request.build_absolute_uri }}">
+{% endblock %}
+{% block body_attrs %}data-header="overlay"{% endblock %}
+{% block main_class %}{% endblock %}
+
+{% block content %}
+<section class="relative">
+  <div class="skeleton relative aspect-video max-h-[70svh] w-full overflow-hidden lg:aspect-[21/9]">
+    <img src="{{ movie.backdrop|rendition:1280 }}" srcset="{{ movie.backdrop|srcset:'backdrop' }}" sizes="100vw" alt="Ảnh nền phim {{ movie.title }}" width="1920" height="1080" fetchpriority="high" decoding="async" class="size-full object-cover">
+    <div class="absolute inset-0 bg-gradient-to-t from-bg via-bg/40 to-bg/10"></div>
+  </div>
+  <div class="relative -mt-16 px-4 md:-mt-24 md:px-8 lg:px-12">
+    <h1 class="max-w-3xl text-3xl font-bold leading-snug md:text-5xl md:leading-snug">{{ movie.title }}</h1>
+    {% if movie.original_title %}<p class="text-sm leading-snug text-muted">{{ movie.original_title }}</p>{% endif %}
+    <p class="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1.5 text-sm leading-snug text-text/90">
+      {% if movie.is_vip %}<span class="badge badge-vip">VIP</span>{% else %}<span class="badge badge-free">Miễn phí</span>{% endif %}
+      {% if movie.is_new %}<span class="badge badge-new">Mới</span>{% endif %}
+      <span>{{ movie.year }}</span>
+      <span>{{ movie.country.name }}</span>
+      <span class="badge border border-text/40 text-text">{{ movie.age_rating }}</span>
+      <span>{% if movie.is_series %}Tập {{ movie.episode_count }}{% if movie.total_episodes %}/{{ movie.total_episodes }}{% endif %}{% else %}{{ movie.duration_minutes }} phút{% endif %}</span>
+      <span>{{ movie.audio_labels|join:" · " }}</span>
+    </p>
+    {% if movie.schedule_text %}<p class="mt-2 text-sm leading-snug text-brand-soft">{{ movie.schedule_text }}</p>{% endif %}
+    <div class="mt-5 flex flex-wrap gap-3">
+      <a href="{{ movie.get_watch_url }}" class="btn btn-primary">
+        <svg class="size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5z"/></svg>
+        Xem ngay
+      </a>
+      {% if movie.pk in my_list_ids %}
+        {% include "includes/mylist_button.html" with movie=movie in_list=True only %}
+      {% else %}
+        {% include "includes/mylist_button.html" with movie=movie in_list=False only %}
+      {% endif %}
+    </div>
+    <p class="mt-5 max-w-3xl leading-relaxed text-text/90">{{ movie.synopsis }}</p>
+    <p class="mt-2 text-sm leading-snug text-muted">Thể loại: {{ movie.genres.all|join:", " }}</p>
+  </div>
+</section>
+{% endblock %}

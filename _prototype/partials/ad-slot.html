@@ -1,0 +1,19 @@
+<!-- Inner content of an ad slot. The page provides the outer
+     <aside class="ad-slot" data-slot="..."> so its height is reserved before JS runs. -->
+<template id="tpl-ad">
+  <div data-field="creative" class="size-full"></div>
+  <span class="pointer-events-none absolute left-2 top-1 text-[10px] leading-snug text-muted">Quảng cáo</span>
+  <a href="vip.html" class="absolute right-0 top-0 flex min-h-11 items-start px-2 pt-1 text-[10px] leading-snug text-muted underline hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand">Ẩn quảng cáo</a>
+</template>
+
+<!-- House ad: shown when no paid creative loads -->
+<template id="tpl-ad-house">
+  <div class="flex size-full items-center justify-center gap-3 bg-gradient-to-r from-surface to-ad px-4 pt-3 md:gap-6">
+    <svg class="hidden size-10 shrink-0 text-vip md:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4l3 12h14l3-12-6 7-4-7-4 7-6-7z"/><path d="M5 20h14"/></svg>
+    <div class="min-w-0">
+      <p class="text-sm font-bold leading-snug md:text-base">Xem phim không quảng cáo</p>
+      <p class="line-clamp-1 text-xs leading-snug text-muted">Chất lượng 4K, tải xuống xem ngoại tuyến.</p>
+    </div>
+    <a href="vip.html" class="btn btn-vip min-h-11 shrink-0 px-3 text-xs">Nâng cấp VIP</a>
+  </div>
+</template>

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}{{ heading }} - {{ brand_name }}{% endblock %}
+
+{% block content %}
+<div class="px-4 pt-6 md:px-8 lg:px-12">
+  <h1 class="text-2xl font-bold leading-snug md:text-3xl">{{ heading }}</h1>
+  {% if movies %}
+    {% include "includes/grid.html" with movies=movies page_obj=page_obj only %}
+  {% else %}
+    <p class="mt-6 text-muted">Chưa có phim nào.</p>
+  {% endif %}
+</div>
+{% endblock %}

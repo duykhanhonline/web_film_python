@@ -1,0 +1,65 @@
+<header data-site-header class="fixed inset-x-0 top-0 z-40 bg-gradient-to-b from-bg/90 to-transparent transition-colors duration-200 data-[scrolled]:bg-bg/95 data-[scrolled]:backdrop-blur">
+  <div class="flex h-14 items-center gap-4 px-4 md:h-16 md:px-8 lg:gap-8 lg:px-12">
+    <a href="index.html" class="flex shrink-0 items-center gap-2 rounded-card focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand" aria-label="PhimHay - Trang chủ">
+      <img src="assets/logo.svg" alt="" width="28" height="28" class="size-7">
+      <span class="text-lg font-bold leading-snug">PhimHay</span>
+    </a>
+
+    <nav aria-label="Điều hướng chính" class="hidden lg:block">
+      <ul class="flex items-center gap-1 text-sm font-medium">
+        <li><a data-nav href="index.html" class="flex min-h-11 items-center rounded-card px-3 text-muted hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand aria-[current=page]:text-text">Trang chủ</a></li>
+        <li><a data-nav href="phim-bo.html" class="flex min-h-11 items-center rounded-card px-3 text-muted hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand aria-[current=page]:text-text">Phim bộ</a></li>
+        <li><a data-nav href="phim-le.html" class="flex min-h-11 items-center rounded-card px-3 text-muted hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand aria-[current=page]:text-text">Phim lẻ</a></li>
+        <li class="relative">
+          <button type="button" data-dropdown aria-expanded="false" aria-controls="menu-quoc-gia" class="flex min-h-11 items-center gap-1 rounded-card px-3 text-muted hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand aria-expanded:text-text">
+            Quốc gia
+            <svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <ul id="menu-quoc-gia" hidden class="absolute left-0 top-full mt-1 w-44 rounded-card border border-line bg-surface p-1 shadow-xl">
+            <li><a href="tim-kiem.html?quoc-gia=han-quoc" class="flex min-h-11 items-center rounded-card px-3 hover:bg-surface-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand">Hàn Quốc</a></li>
+            <li><a href="tim-kiem.html?quoc-gia=trung-quoc" class="flex min-h-11 items-center rounded-card px-3 hover:bg-surface-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand">Trung Quốc</a></li>
+            <li><a href="tim-kiem.html?quoc-gia=viet-nam" class="flex min-h-11 items-center rounded-card px-3 hover:bg-surface-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand">Việt Nam</a></li>
+            <li><a href="tim-kiem.html?quoc-gia=thai-lan" class="flex min-h-11 items-center rounded-card px-3 hover:bg-surface-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand">Thái Lan</a></li>
+            <li><a href="tim-kiem.html?quoc-gia=nhat-ban" class="flex min-h-11 items-center rounded-card px-3 hover:bg-surface-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand">Nhật Bản</a></li>
+            <li><a href="tim-kiem.html?quoc-gia=au-my" class="flex min-h-11 items-center rounded-card px-3 hover:bg-surface-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand">Âu Mỹ</a></li>
+          </ul>
+        </li>
+        <li class="relative">
+          <button type="button" data-dropdown aria-expanded="false" aria-controls="menu-the-loai" class="flex min-h-11 items-center gap-1 rounded-card px-3 text-muted hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand aria-expanded:text-text">
+            Thể loại
+            <svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <ul id="menu-the-loai" hidden class="absolute left-0 top-full mt-1 grid w-80 grid-cols-2 rounded-card border border-line bg-surface p-1 shadow-xl">
+            <li><a href="tim-kiem.html?the-loai=tinh-cam" class="flex min-h-11 items-center rounded-card px-3 hover:bg-surface-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand">Tình cảm</a></li>
+            <li><a href="tim-kiem.html?the-loai=hanh-dong" class="flex min-h-11 items-center rounded-card px-3 hover:bg-surface-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand">Hành động</a></li>
+            <li><a href="tim-kiem.html?the-loai=co-trang" class="flex min-h-11 items-center rounded-card px-3 hover:bg-surface-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand">Cổ trang</a></li>
+            <li><a href="tim-kiem.html?the-loai=hai-huoc" class="flex min-h-11 items-center rounded-card px-3 hover:bg-surface-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand">Hài hước</a></li>
+            <li><a href="tim-kiem.html?the-loai=kinh-di" class="flex min-h-11 items-center rounded-card px-3 hover:bg-surface-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand">Kinh dị</a></li>
+            <li><a href="tim-kiem.html?the-loai=tam-ly" class="flex min-h-11 items-center rounded-card px-3 hover:bg-surface-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand">Tâm lý</a></li>
+            <li><a href="tim-kiem.html?the-loai=hinh-su" class="flex min-h-11 items-center rounded-card px-3 hover:bg-surface-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand">Hình sự</a></li>
+            <li><a href="tim-kiem.html?the-loai=hoat-hinh" class="flex min-h-11 items-center rounded-card px-3 hover:bg-surface-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand">Hoạt hình</a></li>
+          </ul>
+        </li>
+        <li><a data-nav href="tim-kiem.html?loai=truyen-hinh" class="flex min-h-11 items-center rounded-card px-3 text-muted hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand">Truyền hình</a></li>
+      </ul>
+    </nav>
+
+    <div class="ml-auto flex items-center gap-1 md:gap-2">
+      <a href="tim-kiem.html" aria-label="Tìm kiếm" class="hidden size-11 items-center justify-center rounded-full hover:bg-surface-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand md:flex">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+      </a>
+      <button type="button" aria-label="Thông báo" class="flex size-11 items-center justify-center rounded-full hover:bg-surface-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>
+      </button>
+      <a href="dang-nhap.html" aria-label="Tài khoản" class="hidden size-11 items-center justify-center rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand md:flex">
+        <span class="flex size-8 items-center justify-center rounded-full bg-surface-2 text-muted">
+          <svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </span>
+      </a>
+      <a href="vip.html" data-vip-cta class="btn btn-vip px-3 text-xs md:px-4 md:text-sm">
+        <svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4l3 12h14l3-12-6 7-4-7-4 7-6-7z"/><path d="M5 20h14"/></svg>
+        <span class="md:hidden">VIP</span><span class="hidden md:inline">Nâng cấp VIP</span>
+      </a>
+    </div>
+  </div>
+</header>

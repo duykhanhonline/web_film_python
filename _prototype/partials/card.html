@@ -1,0 +1,54 @@
+<template id="tpl-card">
+  <li class="w-32 md:w-40 lg:w-44">
+    <a data-field="link" class="group block rounded-card focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand">
+      <div class="skeleton relative aspect-[2/3] overflow-hidden rounded-card">
+        <img data-field="poster" loading="lazy" decoding="async" width="400" height="600" sizes="(min-width: 1024px) 176px, (min-width: 768px) 160px, 128px" class="size-full object-cover transition-transform duration-300 motion-safe:pointer-fine:group-hover:scale-105">
+        <span data-field="access" class="badge absolute left-1.5 top-1.5"></span>
+        <span data-field="new" hidden class="badge badge-new absolute right-1.5 top-1.5">Mới</span>
+        <div class="absolute inset-x-0 bottom-0 flex flex-wrap items-end justify-between gap-1 bg-gradient-to-t from-bg/90 to-transparent p-1.5 pt-8">
+          <span data-field="audio" class="badge badge-audio"></span>
+          <span data-field="episodes" hidden class="badge badge-audio"></span>
+        </div>
+        <div aria-hidden="true" class="pointer-events-none absolute inset-0 hidden flex-col justify-end bg-bg/85 p-3 opacity-0 transition-opacity duration-200 pointer-fine:flex pointer-fine:group-hover:opacity-100 pointer-fine:group-focus-visible:opacity-100">
+          <p data-field="meta" class="text-xs leading-snug text-muted"></p>
+          <p data-field="synopsis" class="mt-1 line-clamp-4 text-xs leading-snug"></p>
+        </div>
+      </div>
+      <h3 data-field="title" class="mt-2 line-clamp-2 min-h-[2lh] text-sm font-medium leading-snug"></h3>
+    </a>
+  </li>
+</template>
+
+<template id="tpl-card-rank">
+  <li class="relative w-44 pl-11 md:w-56 md:pl-14 lg:w-60">
+    <span data-field="rank" aria-hidden="true" class="rank-number absolute bottom-7 left-0 text-[5.5rem] font-bold leading-none md:text-[7.5rem]"></span>
+    <a data-field="link" class="group relative block rounded-card focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand">
+      <div class="skeleton relative aspect-[2/3] overflow-hidden rounded-card">
+        <img data-field="poster" loading="lazy" decoding="async" width="400" height="600" sizes="(min-width: 1024px) 176px, (min-width: 768px) 160px, 128px" class="size-full object-cover transition-transform duration-300 motion-safe:pointer-fine:group-hover:scale-105">
+        <span data-field="access" class="badge absolute left-1.5 top-1.5"></span>
+        <span data-field="new" hidden class="badge badge-new absolute right-1.5 top-1.5">Mới</span>
+        <div class="absolute inset-x-0 bottom-0 flex flex-wrap items-end justify-between gap-1 bg-gradient-to-t from-bg/90 to-transparent p-1.5 pt-8">
+          <span data-field="audio" class="badge badge-audio"></span>
+          <span data-field="episodes" hidden class="badge badge-audio"></span>
+        </div>
+      </div>
+      <h3 data-field="title" class="mt-2 line-clamp-1 text-sm font-medium leading-snug"></h3>
+    </a>
+  </li>
+</template>
+
+<template id="tpl-card-landscape">
+  <li class="w-60 md:w-72 lg:w-80">
+    <a data-field="link" class="group block rounded-card focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand">
+      <div class="skeleton relative aspect-video overflow-hidden rounded-card">
+        <img data-field="backdrop" loading="lazy" decoding="async" width="640" height="360" sizes="(min-width: 1024px) 320px, (min-width: 768px) 288px, 240px" class="size-full object-cover transition-transform duration-300 motion-safe:pointer-fine:group-hover:scale-105">
+        <span data-field="access" class="badge absolute left-1.5 top-1.5"></span>
+        <div class="absolute inset-x-0 bottom-0 h-1 bg-surface-2/80">
+          <div data-field="progress" class="h-full bg-brand"></div>
+        </div>
+      </div>
+      <h3 data-field="title" class="mt-2 line-clamp-1 text-sm font-medium leading-snug"></h3>
+      <p data-field="resume" class="text-xs leading-snug text-muted"></p>
+    </a>
+  </li>
+</template>

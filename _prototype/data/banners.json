@@ -1,0 +1,22 @@
+[
+  {
+    "movieId": "truong-ca-phuong-hoang"
+  },
+  {
+    "movieId": "mua-he-cuoi-cung"
+  },
+  {
+    "sponsored": true,
+    "sponsor": "Thương hiệu tài trợ",
+    "title": "Mùa hè rực rỡ cùng nhà tài trợ",
+    "synopsis": "Nội dung quảng cáo mẫu cho vị trí slide tài trợ.",
+    "href": "#",
+    "backdrop": "https://placehold.co/{w}x{h}/3A3322/F5F5F7/webp?text=Quang+cao"
+  },
+  {
+    "movieId": "nhiem-vu-cuoi-cung"
+  },
+  {
+    "movieId": "nha-co-ba-chi-em"
+  }
+]

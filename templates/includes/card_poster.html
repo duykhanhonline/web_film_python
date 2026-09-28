@@ -1,0 +1,12 @@
+{% load catalog_tags %}{# Poster image with badges. Shared by card.html and card_rank.html. #}
+<img src="{{ movie.poster|rendition:400 }}" srcset="{{ movie.poster|srcset:'poster' }}" sizes="(min-width: 1024px) 176px, (min-width: 768px) 160px, 128px" alt="Áp phích phim {{ movie.title }}" loading="lazy" decoding="async" width="400" height="600" class="size-full object-cover transition-transform duration-300 motion-safe:pointer-fine:group-hover:scale-105">
+{% if movie.is_vip %}
+<span class="badge badge-vip absolute left-1.5 top-1.5">VIP</span>
+{% else %}
+<span class="badge badge-free absolute left-1.5 top-1.5">Miễn phí</span>
+{% endif %}
+{% if movie.is_new %}<span class="badge badge-new absolute right-1.5 top-1.5">Mới</span>{% endif %}
+<div class="absolute inset-x-0 bottom-0 flex flex-wrap items-end justify-between gap-1 bg-gradient-to-t from-bg/90 to-transparent p-1.5 pt-8">
+  <span class="badge badge-audio">{{ movie.audio_labels.0 }}</span>
+  {% if movie.is_series %}<span class="badge badge-audio">Tập {{ movie.episode_count }}{% if movie.total_episodes %}/{{ movie.total_episodes }}{% endif %}</span>{% endif %}
+</div>

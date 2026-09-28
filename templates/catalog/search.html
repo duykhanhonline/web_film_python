@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block title %}{% if filters.q %}Tìm kiếm “{{ filters.q }}”{% else %}Tìm kiếm{% endif %} - {{ brand_name }}{% endblock %}
+
+{% block content %}
+<div class="px-4 pt-6 md:px-8 lg:px-12">
+  <h1 class="text-2xl font-bold leading-snug md:text-3xl">Tìm kiếm</h1>
+
+  <form method="get" action="{% url 'catalog:search' %}" role="search" class="mt-4">
+    <label for="q" class="sr-only">Tên phim</label>
+    <div class="flex gap-2">
+      <input id="q" name="q" type="search" value="{{ filters.q }}" placeholder="Nhập tên phim, ví dụ: hau due mat troi" autocomplete="off" class="min-h-11 w-full min-w-0 rounded-card border border-line bg-surface-2 px-4 text-base leading-snug placeholder:text-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand">
+      <button type="submit" class="btn btn-primary shrink-0">Tìm</button>
+    </div>
+
+    <div class="mt-3 grid grid-cols-2 gap-2 md:grid-cols-5">
+      <label class="sr-only" for="loai">Loại</label>
+      <select id="loai" name="loai" class="min-h-11 rounded-card border border-line bg-surface-2 px-3 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand">
+        <option value="">Tất cả loại</option>
+        {% for value, label in kind_options %}<option value="{{ value }}" {% if filters.kind == value %}selected{% endif %}>{{ label }}</option>{% endfor %}
+      </select>
+      <label class="sr-only" for="quoc-gia">Quốc gia</label>
+      <select id="quoc-gia" name="quoc-gia" class="min-h-11 rounded-card border border-line bg-surface-2 px-3 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand">
+        <option value="">Tất cả quốc gia</option>
+        {% for c in countries %}<option value="{{ c.slug }}" {% if filters.country == c.slug %}selected{% endif %}>{{ c.name }}</option>{% endfor %}
+      </select>
+      <label class="sr-only" for="the-loai">Thể loại</label>
+      <select id="the-loai" name="the-loai" class="min-h-11 rounded-card border border-line bg-surface-2 px-3 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand">
+        <option value="">Tất cả thể loại</option>
+        {% for g in genres %}<option value="{{ g.slug }}" {% if filters.genre == g.slug %}selected{% endif %}>{{ g.name }}</option>{% endfor %}
+      </select>
+      <label class="sr-only" for="nam">Năm</label>
+      <select id="nam" name="nam" class="min-h-11 rounded-card border border-line bg-surface-2 px-3 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand">
+        <option value="">Tất cả năm</option>
+        {% for y in years %}<option value="{{ y }}" {% if filters.year == y|stringformat:"d" %}selected{% endif %}>{{ y|stringformat:"d" }}</option>{% endfor %}
+      </select>
+      <label class="sr-only" for="am-thanh">Âm thanh</label>
+      <select id="am-thanh" name="am-thanh" class="min-h-11 rounded-card border border-line bg-surface-2 px-3 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand">
+        <option value="">Tất cả âm thanh</option>
+        {% for value, label in audio_options %}<option value="{{ value }}" {% if filters.audio == value %}selected{% endif %}>{{ label }}</option>{% endfor %}
+      </select>
+    </div>
+  </form>
+
+  {% if has_query %}
+    {% if movies %}
+      <h2 class="sr-only">Kết quả tìm kiếm</h2>
+      {% include "includes/grid.html" with movies=movies page_obj=page_obj querystring=querystring only %}
+    {% else %}
+      <p class="mt-8 text-muted">Không tìm thấy phim phù hợp. Thử từ khóa khác nhé.</p>
+    {% endif %}
+  {% else %}
+    <section class="mt-8" aria-labelledby="pho-bien">
+      <h2 id="pho-bien" class="text-lg font-bold leading-snug">Tìm kiếm phổ biến</h2>
+      <ul class="mt-3 flex flex-wrap gap-2">
+        {% for m in popular %}
+        <li><a href="{% url 'catalog:search' %}?q={{ m.title|urlencode }}" class="flex min-h-11 items-center rounded-full border border-line px-4 text-sm hover:bg-surface-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand">{{ m.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </section>
+  {% endif %}
+</div>
+{% endblock %}
